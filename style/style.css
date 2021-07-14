@@ -5,15 +5,16 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0px;
      
 } 
 main{
     position: relative;
     margin: 0px; 
 }
-hr{
+/* hr{
     border: 1px solid #D1D1D1;
-}
+} */
 /*....................... banner section design........................ */
 
 .banner{
@@ -63,18 +64,21 @@ hr{
 .banner-image img{
     height: 100%;
     width: 100%;
-    transition: transform 3s ease-in-out 0.5s;
+    transition: transform 3s ease-out 0.5s;
 }
 
 .banner-image:hover img{
-    transform: scale(0.5);
+    transform: scale(0);
 }
 
 .banner-image:hover{
-    background-image: url("images/joy.jpg");
+    background-image: url("images/messy-cup.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 15px;
 }
+
+
 /* ...................................................... */
 /* players profile design */
 .players-profile{
@@ -102,8 +106,9 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 20px;
+    /* box-shadow: 0px 0px 10px; */
     background-color: rgba(255, 255, 255, 0.945);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   
 
 }
@@ -120,9 +125,6 @@ hr{
     height: 100%;
 }
 
-.photo-detailes{
-    /* left: calc(50% - 300px/2); */
-}
 .name{
     font-size: 28px;
    padding-left: 15px;
@@ -134,8 +136,54 @@ hr{
     padding: 15px;
     margin: 0px;
 }
+/* ............................................................................................. */
+/* extra section :fan section */
+.fan-section{
+    width: 100%;
+    background-color: cadetblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin-top: 100px;
 
-/*................ Footer design ....................*/
+}
+
+.fan-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    padding-top:20px;
+    padding-bottom: 20px;
+} 
+
+.fan-title{
+font-size: 25px;
+background-image: linear-gradient(white,cadetblue);
+width:100%;
+text-align: center;
+}
+
+.fan-vote{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+
+}
+
+.fan-video{
+    padding: 15px;
+    border: 1px solid #969BAB;
+}
+
+
+
+
+
+/*..................................... Footer design ...............................*/
 footer{
     display: flex;
     justify-content: center;
@@ -188,67 +236,81 @@ footer{
 .copyright p{
     font-size: 18px;
 }
-/* ........................................................... ..........*/
-/* media query starts here */
-/* .................................................................... */
+/* .................................................................................. ..........*/
+/*.......................... media query starts here ...........................................*/
+/* ............................................................................................ */
 
 
 @media only screen and (max-width:688px) {
 
-/* banner design */
+    /*.................. banner design section.............. */
 
+    /* ....banner title.... */
    .banner{
        display: flex;
        flex-direction: column;
        width: 100%;
-
-   }
+     }
 
    .banner-title{
     margin: 50px;
     width:278px;
-    height:133px;
-    
-}
+    height:133px;  
+    }
 
-.title{
-    font-size: 36px;
-    line-height: 50px;
-    margin: 0;
-    color: white;
-}
+    .title{
+        font-size: 36px;
+        line-height: 50px;
+        margin: 0;
+        color: white;
+    }
 
-/* .........banner-image ............*/
-.banner-image{
-    width:329px;
-    height: 260px;
-    margin-top: 50px;
-    margin-right: 0px;
-}
+    /* .........banner-image ............*/
+    .banner-image{
+        width:329px;
+        height: 260px;
+        margin-top: 50px;
+        margin-right: 0px;
+    }
 
-/* players profiles */
-.players{
-    grid-template-columns: repeat(1,1fr);
-    padding: 24px 15px;
-}
+    /*................................. players profiles ......................*/
 
-.player{
-    padding: 15px;
-}
+    .players{
+        grid-template-columns: repeat(1,1fr);
+        padding: 24px 15px;
+    }
 
-/* footer section */
+    .player{
+        padding: 15px;
+    }
 
-.footer-box{
-    margin-top: 50px;
-    width: 280px;
-    height: 175px;
-}
+    /* ............fan section ...................*/
 
-.footer-logo{
-    width: 275px;
-    height: 60px;
-    padding-bottom: 30px;;
-}
+    /* .fan-section{
+        width: 100%;
+        background-color: cadetblue;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+
+    } */
+
+
+    /* .........................footer section............................... */
+
+    .footer-box{
+        margin-top: 50px;
+        width: 280px;
+        height: 175px;
+    }
+
+    .footer-logo{
+        width: 275px;
+        height: 60px;
+        padding-bottom: 30px;;
+    }
 }
 
 
